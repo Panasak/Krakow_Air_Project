@@ -30,3 +30,24 @@ With over 230,000 rows, we have the follwing columns after data cleaning:
 ## EDA
 I looked at the distribution of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
 
+![alt text](https://github.com/Panasak/Krakow_Air_Project/blob/main/data_sets/pm1_bar_month.png)
+![alt text](https://github.com/Panasak/Krakow_Air_Project/blob/main/data_sets/pm1_distplot.png)
+![alt text](https://github.com/Panasak/Krakow_Air_Project/blob/main/data_sets/heatmap.png)
+
+## Model Building
+First I transformed the categorical data into dummy variables (latitudes and longitudes). I also split the data into train and test sets with a test size of 30%
+
+I tried two different models and evaulated them using Root Mean Squared Error. I choose RMSE because it is relatively easy to interpret and outliers aren't paticularly bad for this type of model.
+
+I tried two different models:
+
+* **Multiple Linear Regression** - Basedline for the model
+* **Random Forest** - Based on the sparse data from the many categorical variables. I thought a random forest would be effective
+
+## Model Performance
+The Random Forest model far outperformed the other approach on the test and validation sets
+
+* **Multiple Linear Regression:** RMSE = 2.82
+* **Random Forest:** RMSE = 1.58
+
+## 
